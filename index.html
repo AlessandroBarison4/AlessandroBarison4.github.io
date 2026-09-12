@@ -388,8 +388,8 @@
   /* Contatti */
   .contact-grid{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 28px 32px;
   }
   .contact-cell .label{
     font-family:'IBM Plex Mono', monospace;
@@ -397,7 +397,12 @@
     color: var(--text-dim);
     margin-bottom: 8px;
   }
-  .contact-cell .value{ font-size: 1.02rem; }
+  .contact-cell{ min-width: 0; }
+  .contact-cell .value{
+    font-size: 1.02rem;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
   @media (max-width: 480px){ .contact-grid{ grid-template-columns: 1fr; gap: 30px; } }
 
   footer{
