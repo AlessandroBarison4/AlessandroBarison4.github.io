@@ -132,17 +132,14 @@
   .hero .quote{ margin-top: 30px; font-family:'Source Serif 4', serif; font-style: italic; font-size: 1.15rem; color: var(--text); border-left: 2px solid var(--teal-dim); padding-left: 18px; max-width: 52ch; }
   .hero .meta-row{ margin-top: 34px; display:flex; flex-wrap:wrap; gap: 22px; font-family:'IBM Plex Mono', monospace; font-size: 0.84rem; color: var(--text-dim); }
 
-  .trace-svg{ position:absolute; top:0; right: 28px; height: 100%; width: 110px; z-index:1; opacity: 0.85; pointer-events:none; display:none; }
-  @media (min-width: 1320px){ .trace-svg{ display:block; } }
+  .trace-svg{ position:absolute; top:0; left: calc(50% + 510px); height: 100%; width: 90px; z-index:0; opacity: 0.85; pointer-events:none; display:none; }
+@media (min-width: 1400px){ .trace-svg{ display:block; } }
 
-  /* Reusable margin circuit accent for secondary pages — lives entirely
-     outside the centered 920px content column, so it can never overlap
-     text, photos or tables. Hidden until there is enough margin space. */
-  .view{ position:relative; }
-  .margin-trace{ position:absolute; top: 36px; width: 100px; height: 240px; z-index:0; opacity: 0.55; pointer-events:none; display:none; }
-  .margin-trace--right{ right: 28px; }
-  .margin-trace--left{ left: 28px; }
-  @media (min-width: 1320px){ .margin-trace{ display:block; } }
+.view{ position:relative; }
+.margin-trace{ position:absolute; top: 36px; width: 90px; height: 240px; z-index:0; opacity: 0.5; pointer-events:none; display:none; }
+.margin-trace--right{ left: calc(50% + 510px); }
+.margin-trace--left{ right: calc(50% + 510px); }
+@media (min-width: 1400px){ .margin-trace{ display:block; } }
   .trace-path{ stroke: var(--teal-dim); stroke-width: 1.4; fill: none; }
   .trace-draw{ stroke-dasharray: 900; stroke-dashoffset: 900; animation: draw 2.4s ease-out forwards; animation-delay: 0.2s; }
   .trace-node{ fill: var(--ink); stroke: var(--teal); stroke-width: 1.6; opacity: 0; animation: nodeIn 0.5s ease-out forwards; }
@@ -292,14 +289,14 @@
 <!-- ============ HOME ============ -->
 <section class="view active" id="view-home">
   <div class="hero">
-    <svg class="trace-svg" viewBox="0 0 110 500" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-      <path class="trace-path trace-draw" d="M 55 0 L 55 60 L 90 60 L 90 140 L 30 140 L 30 220 L 80 220 L 80 300 L 40 300 L 40 380 L 65 380 L 65 460 L 55 460 L 55 500" />
-      <circle class="trace-node" cx="55" cy="60" r="4" style="animation-delay:0.4s"/>
-      <circle class="trace-node" cx="90" cy="140" r="4" style="animation-delay:0.8s"/>
-      <circle class="trace-node" cx="30" cy="220" r="4" style="animation-delay:1.2s"/>
-      <circle class="trace-node" cx="80" cy="300" r="4" style="animation-delay:1.6s"/>
-      <circle class="trace-node" cx="40" cy="380" r="4" style="animation-delay:2.0s"/>
-      <circle class="trace-node" cx="65" cy="460" r="4" style="animation-delay:2.3s"/>
+    <svg class="trace-svg" viewBox="0 0 90 500" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <path class="trace-path trace-draw" d="M 45 0 L 45 60 L 75 60 L 75 140 L 20 140 L 20 220 L 65 220 L 65 300 L 30 300 L 30 380 L 55 380 L 55 460 L 45 460 L 45 500" />
+      <circle class="trace-node" cx="45" cy="60" r="4" style="animation-delay:0.4s"/>
+      <circle class="trace-node" cx="75" cy="140" r="4" style="animation-delay:0.8s"/>
+      <circle class="trace-node" cx="20" cy="220" r="4" style="animation-delay:1.2s"/>
+      <circle class="trace-node" cx="65" cy="300" r="4" style="animation-delay:1.6s"/>
+      <circle class="trace-node" cx="30" cy="380" r="4" style="animation-delay:2.0s"/>
+      <circle class="trace-node" cx="55" cy="460" r="4" style="animation-delay:2.3s"/>
     </svg>
     <div class="hero-inner">
       <div class="hero-text">
@@ -366,11 +363,11 @@
 
 <!-- ============ CHI SONO ============ -->
 <section class="view" id="view-chi-sono">
-  <svg class="margin-trace margin-trace--right" viewBox="0 0 100 240" aria-hidden="true">
-    <path class="trace-path trace-draw" d="M 60 0 L 60 55 L 92 55 L 92 125 L 38 125 L 38 195 L 58 195 L 58 240" />
-    <circle class="trace-node" cx="60" cy="55" r="4" style="animation-delay:0.3s"/>
-    <circle class="trace-node" cx="92" cy="125" r="4" style="animation-delay:0.7s"/>
-    <circle class="trace-node" cx="38" cy="195" r="4" style="animation-delay:1.1s"/>
+  <svg class="margin-trace margin-trace--left" viewBox="0 0 90 240" aria-hidden="true">
+    <path class="trace-path trace-draw" d="M 40 0 L 40 55 L 10 55 L 10 125 L 65 125 L 65 195 L 42 195 L 42 240" />
+    <circle class="trace-node" cx="40" cy="55" r="4" style="animation-delay:0.3s"/>
+    <circle class="trace-node" cx="10" cy="125" r="4" style="animation-delay:0.7s"/>
+    <circle class="trace-node" cx="65" cy="195" r="4" style="animation-delay:1.1s"/>
   </svg>
   <div class="view-head-row"><a class="back-link mono" href="#home">← Home</a></div>
   <div class="view-body wrap">
@@ -396,11 +393,11 @@
 
 <!-- ============ FORMAZIONE ============ -->
 <section class="view" id="view-formazione">
-  <svg class="margin-trace margin-trace--left" viewBox="0 0 100 240" aria-hidden="true">
-    <path class="trace-path trace-draw" d="M 40 0 L 40 55 L 8 55 L 8 125 L 62 125 L 62 195 L 42 195 L 42 240" />
-    <circle class="trace-node" cx="40" cy="55" r="4" style="animation-delay:0.3s"/>
-    <circle class="trace-node" cx="8" cy="125" r="4" style="animation-delay:0.7s"/>
-    <circle class="trace-node" cx="62" cy="195" r="4" style="animation-delay:1.1s"/>
+  <svg class="margin-trace margin-trace--right" viewBox="0 0 90 240" aria-hidden="true">
+    <path class="trace-path trace-draw" d="M 50 0 L 50 55 L 80 55 L 80 125 L 25 125 L 25 195 L 48 195 L 48 240" />
+    <circle class="trace-node" cx="50" cy="55" r="4" style="animation-delay:0.3s"/>
+    <circle class="trace-node" cx="80" cy="125" r="4" style="animation-delay:0.7s"/>
+    <circle class="trace-node" cx="25" cy="195" r="4" style="animation-delay:1.1s"/>
   </svg>
   <div class="view-head-row"><a class="back-link mono" href="#home">← Home</a></div>
   <div class="view-body wrap">
@@ -425,11 +422,11 @@
 
 <!-- ============ ESAMI ============ -->
 <section class="view" id="view-esami">
-  <svg class="margin-trace margin-trace--right" viewBox="0 0 100 240" aria-hidden="true">
-    <path class="trace-path trace-draw" d="M 60 0 L 60 55 L 92 55 L 92 125 L 38 125 L 38 195 L 58 195 L 58 240" />
-    <circle class="trace-node" cx="60" cy="55" r="4" style="animation-delay:0.3s"/>
-    <circle class="trace-node" cx="92" cy="125" r="4" style="animation-delay:0.7s"/>
-    <circle class="trace-node" cx="38" cy="195" r="4" style="animation-delay:1.1s"/>
+  <svg class="margin-trace margin-trace--left" viewBox="0 0 90 240" aria-hidden="true">
+    <path class="trace-path trace-draw" d="M 40 0 L 40 55 L 10 55 L 10 125 L 65 125 L 65 195 L 42 195 L 42 240" />
+    <circle class="trace-node" cx="40" cy="55" r="4" style="animation-delay:0.3s"/>
+    <circle class="trace-node" cx="10" cy="125" r="4" style="animation-delay:0.7s"/>
+    <circle class="trace-node" cx="65" cy="195" r="4" style="animation-delay:1.1s"/>
   </svg>
   <div class="view-head-row"><a class="back-link mono" href="#home">← Home</a></div>
   <div class="view-body wrap">
@@ -694,11 +691,11 @@
 
 <!-- ============ ESPERIENZA ============ -->
 <section class="view" id="view-esperienza">
-  <svg class="margin-trace margin-trace--left" viewBox="0 0 100 240" aria-hidden="true">
-    <path class="trace-path trace-draw" d="M 40 0 L 40 55 L 8 55 L 8 125 L 62 125 L 62 195 L 42 195 L 42 240" />
-    <circle class="trace-node" cx="40" cy="55" r="4" style="animation-delay:0.3s"/>
-    <circle class="trace-node" cx="8" cy="125" r="4" style="animation-delay:0.7s"/>
-    <circle class="trace-node" cx="62" cy="195" r="4" style="animation-delay:1.1s"/>
+  <svg class="margin-trace margin-trace--right" viewBox="0 0 90 240" aria-hidden="true">
+    <path class="trace-path trace-draw" d="M 50 0 L 50 55 L 80 55 L 80 125 L 25 125 L 25 195 L 48 195 L 48 240" />
+    <circle class="trace-node" cx="50" cy="55" r="4" style="animation-delay:0.3s"/>
+    <circle class="trace-node" cx="80" cy="125" r="4" style="animation-delay:0.7s"/>
+    <circle class="trace-node" cx="25" cy="195" r="4" style="animation-delay:1.1s"/>
   </svg>
   <div class="view-head-row"><a class="back-link mono" href="#home">← Home</a></div>
   <div class="view-body wrap">
@@ -730,11 +727,11 @@
 
 <!-- ============ COMPETENZE ============ -->
 <section class="view" id="view-competenze">
-  <svg class="margin-trace margin-trace--right" viewBox="0 0 100 240" aria-hidden="true">
-    <path class="trace-path trace-draw" d="M 60 0 L 60 55 L 92 55 L 92 125 L 38 125 L 38 195 L 58 195 L 58 240" />
-    <circle class="trace-node" cx="60" cy="55" r="4" style="animation-delay:0.3s"/>
-    <circle class="trace-node" cx="92" cy="125" r="4" style="animation-delay:0.7s"/>
-    <circle class="trace-node" cx="38" cy="195" r="4" style="animation-delay:1.1s"/>
+  <svg class="margin-trace margin-trace--left" viewBox="0 0 90 240" aria-hidden="true">
+    <path class="trace-path trace-draw" d="M 40 0 L 40 55 L 10 55 L 10 125 L 65 125 L 65 195 L 42 195 L 42 240" />
+    <circle class="trace-node" cx="40" cy="55" r="4" style="animation-delay:0.3s"/>
+    <circle class="trace-node" cx="10" cy="125" r="4" style="animation-delay:0.7s"/>
+    <circle class="trace-node" cx="65" cy="195" r="4" style="animation-delay:1.1s"/>
   </svg>
   <div class="view-head-row"><a class="back-link mono" href="#home">← Home</a></div>
   <div class="view-body wrap">
@@ -752,11 +749,11 @@
 
 <!-- ============ PROGETTI ============ -->
 <section class="view" id="view-progetti">
-  <svg class="margin-trace margin-trace--left" viewBox="0 0 100 240" aria-hidden="true">
-    <path class="trace-path trace-draw" d="M 40 0 L 40 55 L 8 55 L 8 125 L 62 125 L 62 195 L 42 195 L 42 240" />
-    <circle class="trace-node" cx="40" cy="55" r="4" style="animation-delay:0.3s"/>
-    <circle class="trace-node" cx="8" cy="125" r="4" style="animation-delay:0.7s"/>
-    <circle class="trace-node" cx="62" cy="195" r="4" style="animation-delay:1.1s"/>
+  <svg class="margin-trace margin-trace--right" viewBox="0 0 90 240" aria-hidden="true">
+    <path class="trace-path trace-draw" d="M 50 0 L 50 55 L 80 55 L 80 125 L 25 125 L 25 195 L 48 195 L 48 240" />
+    <circle class="trace-node" cx="50" cy="55" r="4" style="animation-delay:0.3s"/>
+    <circle class="trace-node" cx="80" cy="125" r="4" style="animation-delay:0.7s"/>
+    <circle class="trace-node" cx="25" cy="195" r="4" style="animation-delay:1.1s"/>
   </svg>
   <div class="view-head-row"><a class="back-link mono" href="#home">← Home</a></div>
   <div class="view-body wrap">
@@ -790,11 +787,11 @@
 
 <!-- ============ LINGUE ============ -->
 <section class="view" id="view-lingue">
-  <svg class="margin-trace margin-trace--right" viewBox="0 0 100 240" aria-hidden="true">
-    <path class="trace-path trace-draw" d="M 60 0 L 60 55 L 92 55 L 92 125 L 38 125 L 38 195 L 58 195 L 58 240" />
-    <circle class="trace-node" cx="60" cy="55" r="4" style="animation-delay:0.3s"/>
-    <circle class="trace-node" cx="92" cy="125" r="4" style="animation-delay:0.7s"/>
-    <circle class="trace-node" cx="38" cy="195" r="4" style="animation-delay:1.1s"/>
+  <svg class="margin-trace margin-trace--left" viewBox="0 0 90 240" aria-hidden="true">
+    <path class="trace-path trace-draw" d="M 40 0 L 40 55 L 10 55 L 10 125 L 65 125 L 65 195 L 42 195 L 42 240" />
+    <circle class="trace-node" cx="40" cy="55" r="4" style="animation-delay:0.3s"/>
+    <circle class="trace-node" cx="10" cy="125" r="4" style="animation-delay:0.7s"/>
+    <circle class="trace-node" cx="65" cy="195" r="4" style="animation-delay:1.1s"/>
   </svg>
   <div class="view-head-row"><a class="back-link mono" href="#home">← Home</a></div>
   <div class="view-body wrap">
@@ -826,11 +823,11 @@
 
 <!-- ============ CONTATTI ============ -->
 <section class="view" id="view-contatti">
-  <svg class="margin-trace margin-trace--left" viewBox="0 0 100 240" aria-hidden="true">
-    <path class="trace-path trace-draw" d="M 40 0 L 40 55 L 8 55 L 8 125 L 62 125 L 62 195 L 42 195 L 42 240" />
-    <circle class="trace-node" cx="40" cy="55" r="4" style="animation-delay:0.3s"/>
-    <circle class="trace-node" cx="8" cy="125" r="4" style="animation-delay:0.7s"/>
-    <circle class="trace-node" cx="62" cy="195" r="4" style="animation-delay:1.1s"/>
+  <svg class="margin-trace margin-trace--right" viewBox="0 0 90 240" aria-hidden="true">
+    <path class="trace-path trace-draw" d="M 50 0 L 50 55 L 80 55 L 80 125 L 25 125 L 25 195 L 48 195 L 48 240" />
+    <circle class="trace-node" cx="50" cy="55" r="4" style="animation-delay:0.3s"/>
+    <circle class="trace-node" cx="80" cy="125" r="4" style="animation-delay:0.7s"/>
+    <circle class="trace-node" cx="25" cy="195" r="4" style="animation-delay:1.1s"/>
   </svg>
   <div class="view-head-row"><a class="back-link mono" href="#home">← Home</a></div>
   <div class="view-body wrap">
